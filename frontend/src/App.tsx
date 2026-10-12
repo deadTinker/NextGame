@@ -607,7 +607,7 @@ const genres = ["All", ...new Set(games.map((game) => game.genre))];
                 {query && <button className="clear-search" onClick={() => setQuery("")} aria-label="Clear search"><X size={15} /></button>}
               </label>
               <div className="game-list">
-                {filteredGames.slice(0, showAll ? undefined : 3).map((game, i) => (
+                {filteredGames.slice(0, showAll ? undefined : 3).map((game) => (
                   <div className="game-row" key={game.name}>
                     <div className="game-cover" style={{ background: game.color }}>
                       <span>{game.name.split(" ").map((word) => word[0]).join("")}</span>
